@@ -1,0 +1,185 @@
+@import reset
+@import grid
+@import monochrome
+@import mixins
+@import forms
+
+$link: rgb(255,127,0)
+$hover: rgb(255,250,245)
+$accent: #aaa
+
+/*----------------------------------------------------------------------
+
+body
+  font: 12px/1.5 $sans
+  color: #666
+  background: #fff
+
+a
+  color: $link
+  text-decoration: none
+  &:hover, &:focus
+/*----------------------------------------------------------------------
+
+header
+  background: #000
+  height: 8em
+
+  nav
+    @extend .cnt
+    margin-left: 16px
+    
+    h1
+      +col($s4)
+      a
+        font: 1.5em/4 $sans
+        text-transform: uppercase
+        color: #fff
+        &:hover
+          color: #fff
+        em
+          font-style: normal
+          color: $accent
+
+
+      a
+        display: block
+        text-indent: -999em
+        background: url(../i/site/logo.png)
+
+    #search
+      +flush($s4)
+      margin-right: $s1
+      margin-top: 33px
+      background: #444
+      +border-radius(3px)
+      input
+        display: block
+        float: left
+        background: #444
+        border: none
+        &.field
+          width: $s3
+          margin-left: 6px
+          padding: 0
+          font: bold 14px/1 $sans
+          color: #fff
+          &:hover
+            border-color: #999
+        &.submit
+          float: right
+          padding: 3px 12px
+          font: bold 12px/1 $sans
+          text-transform: uppercase
+          color: #fff
+          background: #222
+          border: none
+          +border-radius(3px)
+          cursor: pointer
+
+    ul
+      +flush($s3)
+      li
+        +col(125px)
+        border-left: 1px solid #444
+
+        a
+          display: block
+          font-weight: bold
+          color: #ccc
+          padding: 3em 0 0
+          &:hover
+            color: #fff
+
+/*----------------------------------------------------------------------
+
+#content
+  @extend .cnt
+  background: url(../i/grid.pngz)
+  margin: 1.5em 0 1.5em 16px
+
+  .content
+    border-top: 3px solid #ddd
+    padding: 1em 0 2em
+
+  p
+    margin: 0 0 1em
+
+  nav#products
+    +col($s2)
+
+    ul
+      margin: 0 0 2em
+      li
+        h3
+          a
+            display: block
+            padding: 1.5em 1em .5em
+            text-transform: uppercase
+            line-height: 1
+            letter-spacing: 1px
+            color: #666
+            border-bottom: 1px solid #ddd
+            &:hover, &:focus
+              color: $link
+        ul
+          a
+            display: block
+            padding: .4em 1em .6em
+            line-height: 1
+            color: $accent
+            border-bottom: 1px solid #ddd
+            &:hover, &:focus
+              color: $link
+              background: $hover
+            &:active
+              padding: .5em 1em .4em
+  #main
+    +col($s7)
+
+    #slideshow 
+      height: 336px
+      margin: 0 0 1em
+      background: #eee
+
+      ul#slides
+        li.slide
+          img
+
+    p
+      font-size: 14px
+
+      a:hover, a:focus
+        background: $hover
+
+  #side
+    +col($s3)
+  
+/*----------------------------------------------------------------------
+
+footer  
+  @extend .cnt
+  font-size: 12px
+  margin-left: 16px
+  
+  nav
+    ul
+      border-top: 3px solid #333
+
+      li
+        float: left
+        padding: .5em 0
+        margin-right: 10px
+
+        a
+          color: #666
+          font-weight: bold
+          &:hover, &:focus
+            color: $link
+            background: $hover
+
+    &#meta
+      +col($s9)
+
+    &#copyright
+      +col($s3)

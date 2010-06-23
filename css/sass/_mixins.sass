@@ -1,0 +1,100 @@
+// fonts
+$serif: Cambria, Georgia, serif
+$sans: "Helvetica Neue", Arial, Helvetica, sans-serif
+$mono: Consolas, "Lucida Console", Courier New, monospace
+
+// text stroke
+=text-stroke($w: 0.1px, $c: transparent)
+  -webkit-text-stroke: $w $c
+  
+//----------------------------------------------------------------------
+
+  Gradients
+  
+  ----------------------------------------------------------------------
+  
+// simple linear gradient
+=bg-linear-gradient($a: white, $b: black)
+  background: $a
+  background: -webkit-gradient(linear, left top, left bottom, from($a), to($b))
+  background: -moz-linear-gradient($a, $b)
+
+  
+// simple radial gradient
+=bg-radial-gradient($x: center, $y: 200, $r: 1000, $a: white, $b: black)
+  background: $a
+  background: -webkit-gradient(radial, $x $y, 0, $x $y, $r, from($a), to($b))
+  background: -moz-radial-gradient($x $y+px, circle, $a, $b)
+
+//----------------------------------------------------------------------
+  Borders
+  ----------------------------------------------------------------------
+  
+// complex borders
+=complex-border($t: $w30, $r: $b15, $b: $b30, $l: $w15)
+  border: 1px solid $t
+  border-right-color: $r
+  border-bottom-color: $b
+  border-left-color: $l
+  
+// border radius
+=border-radius($r: 5px)
+  border-radius: $r
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  
+=border-top-radius($r: 5px)
+  border-top-left-radius: $r
+  border-top-right-radius: $r
+  -webkit-border-top-left-radius: $r
+  -webkit-border-top-right-radius: $r
+  -moz-border-radius-topleft: $r
+  -moz-border-radius-topright: $r
+  
+=border-right-radius($r: 5px)
+  border-top-right-radius: $r
+  border-bottom-right-radius: $r
+  -webkit-border-top-right-radius: $r
+  -webkit-border-bottom-right-radius: $r
+  -moz-border-radius-topright: $r
+  -moz-border-radius-bottomright: $r
+  
+=border-bottom-radius($r: 5px)
+  border-bottom-left-radius: $r
+  border-bottom-right-radius: $r
+  -webkit-border-bottom-left-radius: $r
+  -webkit-border-bottom-right-radius: $r
+  -moz-border-radius-bottomleft: $r
+  -moz-border-radius-bottomright: $r
+  
+=border-left-radius($r: 5px)
+  border-top-left-radius: $r
+  border-bottom-left-radius: $r
+  -webkit-border-top-left-radius: $r
+  -webkit-border-bottom-left-radius: $r
+  -moz-border-radius-topleft: $r
+  -moz-border-radius-bottomleft: $r
+  
+//----------------------------------------------------------------------
+  Box Shadows
+  ----------------------------------------------------------------------
+  
+=box-shadow($c: hsla(0,0%,0%,.3), $x: 0, $y: 0, $s: 3)
+  box-shadow: $c $x $y $s
+  -webkit-box-shadow: $c $x $y $s
+  -moz-box-shadow: $c $x $y $s
+  
+//----------------------------------------------------------------------
+  Transitions
+  ----------------------------------------------------------------------
+  
+=transition($p: all, $d: .15s, $t: ease)
+  transition: $p $d $t
+  -webkit-transition: $p $d $t
+  -moz-transition: $p $d $t
+  -o-transition: $p $d $t
+  
+=transition-duration($d: 0s)
+  -webkit-transition-duration: $d
+  -moz-transition-duration: $d
+  -o-transition-duration: $d

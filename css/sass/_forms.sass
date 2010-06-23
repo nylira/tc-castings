@@ -1,0 +1,65 @@
+select,label
+  +bg-linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.1))
+
+select,label.dollar + input
+  +complex-border(rgba(0,0,0,.3),rgba(255,255,255,.1),rgba(255,255,255,.2),rgba(0,0,0,.15))
+
+select,label,label.dollar + input
+  +border-radius(3px)
+  
+select
+  width: 198px
+  font: 14px/24px Arial
+  color: white
+  option
+    color: white
+    background: #444444
+
+label
+  &.dollar
+    display: block
+    width: 178px
+    padding: 0 10px
+    font: 24px/48px Arial
+    +transition
+  &.focus
+    color: rgb(102,102,102)
+  &.has-text
+    color: transparent
+    +transition-duration
+  &.dollar + .input
+    display: block
+    margin-top: -48px
+    width: 163px
+    height: 36px
+    padding: 5px 9px 5px 24px
+    font: bold 36px/1 Arial
+    color: lime
+    text-align: right
+    text-shadow: black 0 1px 0
+    background: transparent
+    +transition
+    &:focus
+      +box-shadow(rgba(0,0,0,.15),0,0,3px)
+
+li.submit button
+  display: block
+  width: 172px
+  padding: 3px
+  margin: 18px auto 0
+  background: rgba(255,255,255,.15)
+  border: none
+  +border-radius(22px)
+  +box-shadow
+  +transition
+  cursor: pointer
+  span
+    display: block
+    margin: 0 -1px
+    font: bold 18px/36px Arial
+    color: white
+    text-shadow: rgba(0,0,0,.4) 0 0 5px
+    +bg-linear-gradient(rgb(100,200,255), rgb(0,50,75))
+    +border-radius(18px)
+  &:active span
+    +bg-linear-gradient(rgb(0,50,75), rgb(100,200,255))
