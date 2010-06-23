@@ -156,7 +156,7 @@ body {
   background: white; }
 
 a {
-  color: #00aaee;
+  color: #0099ee;
   text-decoration: none; }
 
 /*---------------------------------------------------------------------- */
@@ -245,20 +245,20 @@ header {
     #content nav#products ul {
       margin: 0 0 2em; }
       #content nav#products ul li h3 a {
-        display: block; }
-        #content nav#products ul li h3 a:hover, #content nav#products ul li h3 a:focus {
-          color: #00aaee; }
-      #content nav#products ul li ul a {
         display: block;
-        padding: 0.4em 0.5em 0.6em;
-        line-height: 1;
-        color: #333333;
-        border-bottom: 1px solid #dddddd; }
-        #content nav#products ul li ul a:hover, #content nav#products ul li ul a:focus {
-          color: #00aaee;
-          background: #f5faff; }
-        #content nav#products ul li ul a:active {
-          padding: 0.55em 0.5em 0.45em; }
+        color: #333333; }
+        #content nav#products ul li h3 a:hover, #content nav#products ul li h3 a:focus {
+          color: #0099ee; }
+      #content nav#products ul li ul {
+        padding: 0.5em 0 0; }
+        #content nav#products ul li ul a {
+          display: block;
+          padding: 0.4em 0.5em 0.6em;
+          line-height: 1; }
+          #content nav#products ul li ul a:hover, #content nav#products ul li ul a:focus {
+            background: #f5faff; }
+          #content nav#products ul li ul a:active {
+            padding: 0.55em 0.5em 0.45em; }
   #content #main {
     width: 576px;
     padding: 0 6px;
@@ -294,7 +294,7 @@ footer {
         color: #333333;
         font-weight: bold; }
         footer nav ul li a:hover, footer nav ul li a:focus {
-          color: #00aaee;
+          color: #0099ee;
           background: #f5faff; }
   footer nav#meta {
     width: 744px;
