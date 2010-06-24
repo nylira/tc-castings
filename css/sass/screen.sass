@@ -4,17 +4,40 @@
 @import mixins
 @import forms
 
-$link: rgb(255,127,0)
-$hover: rgb(255,250,245)
+@media screen and (max-width: 1920px)
+  body
+    font-size: 20px
 
-$link: #09e
-$hover: rgb(245,250,255)
+@media screen and (max-width: 1680px)
+  body
+    font-size: 18px
+
+@media screen and (max-width: 1440px)
+  body
+    font-size: 16px
+
+@media screen and (max-width: 1280px)
+  body
+    font-size: 14px
+
+@media screen and (max-width: 1024px)
+  body
+    font-size: 13px
+
+@media screen and (max-width: 800px)
+  body
+    font-size: 12px
 
 /*----------------------------------------------------------------------
 
+$text: #333
+$link: rgb(255,127,0)
+$hover: rgb(255,250,240)
+
 body
-  font: 12px/1.5 $sans
-  color: #333
+  line-height: 1.5
+  font-family: $sans
+  color: $text
   background: #fff
 
 a
@@ -25,158 +48,97 @@ a
 /*----------------------------------------------------------------------
 
 header
-  background: #000
-  height: 8em
+  @extend .cnt
+  padding: 1.5em 0 0
+  h1
+    +col($s4)
+    a
+      display: block
+      padding: .37333em .3333em 2.63em
+      font: 1.5em/1 $sans
+      color: $text
+      border-top: .333em solid #333
+      border-bottom: 1px solid #ddd
+
+      &:hover
+        color: $link
 
   nav
-    @extend .cnt
-    margin-left: 16px
-    
-    h1
-      +col($s4)
-      a
-        display: block
-        height: 6em
-        text-indent: -999em
-        background: url(../i/site/logo.png)
-
-    #search
-      +flush($s4)
-      margin-right: $s1
-      margin-top: 33px
-      background: #444
-      +border-radius(3px)
-      input
-        display: block
-        float: left
-        background: #444
-        border: none
-        &.field
-          width: $s3
-          margin-left: 6px
-          padding: 0
-          font: bold 14px/1 $sans
-          color: #fff
-        &.submit
-          float: right
-          padding: 3px 1em
-          font: bold 12px/1 $sans
-          text-transform: uppercase
-          color: #ccc
-          background: #222
-          border: none
-          +border-radius(2px)
-          cursor: pointer
-
+    +col($s8)
     ul
-      +flush($s3)
-      li
-        +col(125px)
-        border-left: 1px solid #444
+      overflow: hidden
+      border-top: .5em solid #333
+      border-bottom: 1px solid #ddd
 
+      li
+        float: left
+        width: 25%
         a
           display: block
+          padding: .5em .5em 4em
           font-weight: bold
-          .text-transform: uppercase
-          color: #ccc
-          padding: 3em .5em 0
+          color: $text
+          border-left: 1px solid #ddd
           &:hover
+            color: $link
+            background: rgb(255,127,0)
             color: #fff
+        ul
+          display: none
 
 /*----------------------------------------------------------------------
 
 #content
   @extend .cnt
-  background: url(../i/grid.pngz)
-  margin: 1.5em 0 1.5em 16px
+  padding: 1em 0
 
-  .content
-    border-top: 3px solid #ddd
-    padding: 1em 0 2em
+  #slideshow 
+    overflow: hidden
 
-  h3
-    padding: 1.25em .5em .25em
-    .text-transform: uppercase
-    border-bottom: 1px solid #ddd
-
-  p
-    margin: 0 0 1em
-
-    a:hover, a:focus
-      background: $hover
-
-  nav#products
-    +col($s2)
-
-    ul
-      margin: 0 0 2em
-      li
-        h3
-          a
-            display: block
-            color: #333
-            &:hover, &:focus
-              color: $link
-        ul
-          padding: .5em 0 0
-          a
-            display: block
-            padding: .4em .5em .6em
-            line-height: 1
-            &:hover, &:focus
-              background: $hover
-            &:active
-              padding: .55em .5em .45em
-  #main
-    +col($s7)
-
-    #slideshow 
-      height: 336px
-      margin: 0 0 1em
-      background: #eee
-
-      ul#slides
-        li.slide
+    ul#slides
+      li.slide
+        padding: 0
+        margin: $gut
+        position: relative
+        a
+          display: block
           img
-            display: none
-
-    p
-      margin-right: 1em
-
-  #side
-    +col($s3)
-
-    p
-      padding: .5em 1em 2em .5em
-
-    #news
-      border-top: 1px solid #ddd
-      padding: 1em 0 0
+          p
+            
+            position: absolute
+            bottom: 2em
+            left: 0
+            padding: 0 1.5em 0 .5em
+            font: bold 3em/1.5 $sans
+            letter-spacing: -2px
+            color: #fff
+            background: #000
   
 /*----------------------------------------------------------------------
 
 footer  
   @extend .cnt
-  margin-left: 16px
+  font-size: .75em
   
-  nav
+  a
+    color: $text
+    &:hover, &:focus
+      color: $link
+      background: $hover
+
+  nav#meta
+    +col($s8)
     ul
-      border-top: 3px solid #333
+      border-top: 1px solid #333
+      padding: 0 .5em
 
       li
         float: left
         padding: .5em 0
-        margin-right: 10px
+        margin-right: 1em
 
-        a
-          color: #333
-          font-weight: bold
-          &:hover, &:focus
-            color: $link
-            background: $hover
-
-    &#meta
-      +col($s9)
-
-    &#copyright
-      +col($s3)
+  #news
+    +col($s4)
+    p
+      border-top: 1px solid #333
+      padding: .5em

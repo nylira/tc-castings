@@ -1,5 +1,9 @@
-$column: 72px
-$gutter: 12px
+$cols: 12
+$divs: 7
+
+$column: 100% / $cols / $divs * ($divs - 1)
+$gutter: 100% / $cols / $divs
+$gut: $gutter / 2
 
 $s1: $column + $gutter
 $s2: $s1 * 2
@@ -15,8 +19,8 @@ $s11: $s1 * 11
 $s12: $s1 * 12
 
 .cnt
-  width: $s12
-  margin: 0 auto
+  width: 96%
+  margin: 0 2%
   &:after
     clear: both
     display: block
@@ -24,7 +28,7 @@ $s12: $s1 * 12
 
 =col($s: $s12)
   width: $s - $gutter
-  padding: 0 $gutter / 2
+  padding: 0 $gut
   float: left
 
 =flush($s: $s12)
