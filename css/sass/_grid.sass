@@ -27,10 +27,17 @@ $s12: $s1 * 12
     content: "\0020"
 
 =col($s: $s12)
-  width: $s - $gutter
-  padding: 0 $gut
+  width: $s
   float: left
 
-=flush($s: $s12)
-  width: $s
+=colp($s: $s12)
+  width: $s - $gutter
+  padding-left: $gut
+  padding-right: $gut
+  float: left
+
+=colm($s: $s12)
+  width: $s - $gutter
+  margin-left: $gut
+  margin-right: $gut
   float: left
