@@ -48,7 +48,7 @@ em {
   font-style: italic; }
 
 .cnt, header, #content, footer {
-  width: 96%;
+  width: 96%%;
   margin: 0 2%; }
   .cnt:after, header:after, #content:after, footer:after {
     clear: both;
@@ -152,23 +152,23 @@ li.submit button {
 
 @media screen and (max-width: 1920px) {
   body {
-    font-size: 20px; } }
+    font-size: 24px; } }
 
 @media screen and (max-width: 1680px) {
   body {
-    font-size: 18px; } }
+    font-size: 22px; } }
 
 @media screen and (max-width: 1440px) {
   body {
-    font-size: 16px; } }
+    font-size: 20px; } }
 
 @media screen and (max-width: 1280px) {
   body {
-    font-size: 14px; } }
+    font-size: 18px; } }
 
 @media screen and (max-width: 1024px) {
   body {
-    font-size: 13px; } }
+    font-size: 16px; } }
 
 @media screen and (max-width: 800px) {
   body {
@@ -186,89 +186,123 @@ a {
   text-decoration: none; }
 
 /*---------------------------------------------------------------------- */
-header {
-  padding: 1.5em 0 0; }
-  header h1 {
+header nav {
+  margin: 1.5em 0.595% 0; }
+  header nav a#branding {
+    display: block;
     width: 32.143%;
     padding: 0 0.595%;
     float: left; }
-    header h1 a {
-      display: block;
-      padding: 0.373em 0.333em 2.63em;
-      font: 1.5em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    header nav a#branding h1 {
+      padding: 0.333em 0 1.5em;
+      font-size: 1.5em;
+      letter-spacing: -1px;
       color: #333333;
       border-top: 0.333em solid #333333;
       border-bottom: 1px solid #dddddd; }
-      header h1 a:hover {
-        color: #ff7f00; }
-  header nav {
+      header nav a#branding h1 span {
+        font-weight: normal; }
+    header nav a#branding:hover h1 {
+      color: #ff7f00; }
+    header nav a#branding p {
+      line-height: 1;
+      color: #aaaaaa;
+      display: none; }
+  header nav ul {
     width: 65.476%;
     padding: 0 0.595%;
-    float: left; }
-    header nav ul {
-      overflow: hidden;
-      border-top: 0.5em solid #333333;
-      border-bottom: 1px solid #dddddd; }
-      header nav ul li {
-        float: left;
-        width: 25%; }
-        header nav ul li a {
-          display: block;
-          padding: 0.5em 0.5em 4em;
-          font-weight: bold;
-          color: #333333;
-          border-left: 1px solid #dddddd; }
-          header nav ul li a:hover {
-            color: #ff7f00;
-            background: #ff7f00;
-            color: white; }
-        header nav ul li ul {
-          display: none; }
+    float: left;
+    overflow: hidden; }
+    header nav ul li {
+      float: left;
+      width: 25%; }
+      header nav ul li a {
+        display: block;
+        padding: 0.5em 0 3em;
+        font-weight: bold;
+        color: #333333;
+        border-top: 0.5em solid #333333;
+        border-bottom: 1px solid #dddddd; }
+        header nav ul li a:hover {
+          color: #ff7f00; }
+      header nav ul li ul {
+        display: none; }
 
 /*---------------------------------------------------------------------- */
-#content {
-  padding: 1em 0; }
-  #content #slideshow {
-    overflow: hidden; }
-    #content #slideshow ul#slides li.slide {
-      padding: 0;
-      margin: 0.595%;
-      position: relative; }
-      #content #slideshow ul#slides li.slide a {
-        display: block; }
-        #content #slideshow ul#slides li.slide a p {
-          position: absolute;
-          bottom: 2em;
-          left: 0;
-          padding: 0 1.5em 0 0.5em;
-          font: bold 3em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-          letter-spacing: -2px;
-          color: white;
-          background: black; }
+#content #slideshow {
+  overflow: hidden;
+  margin: 1em 0; }
+  #content #slideshow ul#slides li.slide {
+    padding: 0;
+    margin: 0.595%;
+    position: relative; }
+    #content #slideshow ul#slides li.slide a {
+      display: block; }
+      #content #slideshow ul#slides li.slide a p {
+        position: absolute;
+        bottom: 2em;
+        left: 0;
+        padding: 0 1.5em 0 0.5em;
+        font: bold 3em/1.5 Times New Roman;
+        letter-spacing: -6px;
+        color: white;
+        background: black; }
+
+#about #content .title {
+  margin: 0 0.595% 2em;
+  padding: 2.5em 0 1.5em;
+  border-bottom: 1px solid #dddddd;
+  overflow: hidden; }
+  #about #content .title h2 {
+    width: 32.143%;
+    padding: 0 0.595%;
+    float: left;
+    margin: 4em 0 0;
+    font-weight: normal;
+    font-family: Cambria, Georgia, serif; }
+  #about #content .title h3 {
+    width: 48.81%;
+    padding: 0 0.595%;
+    float: left;
+    font-size: 2em;
+    letter-spacing: -1px; }
+#about #content .body {
+  width: 48.81%;
+  padding: 0 0.595%;
+  float: left;
+  margin: 0 16.667% 0 33.333%; }
+  #about #content .body .drop {
+    display: block;
+    float: left;
+    font: 12em/0.9 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: -0.05em 0.05em -0.1em 0.5em; }
+  #about #content .body q:before {
+    content: "\201C"; }
+  #about #content .body q:after {
+    content: "\201D"; }
+  #about #content .body p {
+    font-family: Cambria, Georgia, serif;
+    padding: 0 0 1em; }
+  #about #content .body ul.read.more li a:before {
+    content: "\00AB\0020";
+    color: #999999; }
 
 /*---------------------------------------------------------------------- */
 footer {
   font-size: 0.75em; }
+  footer nav {
+    width: 98.81%;
+    padding: 0 0.595%;
+    float: left;
+    padding: 4em 0 1em;
+    margin: 0 0.595%;
+    border-top: 0.2em solid #333333; }
   footer a {
     color: #333333; }
     footer a:hover, footer a:focus {
       color: #ff7f00;
       background: #fffaf0; }
-  footer nav#meta {
-    width: 65.476%;
-    padding: 0 0.595%;
-    float: left; }
-    footer nav#meta ul {
-      border-top: 1px solid #333333;
-      padding: 0 0.5em; }
-      footer nav#meta ul li {
-        float: left;
-        padding: 0.5em 0;
-        margin-right: 1em; }
-  footer #news {
-    width: 32.143%;
-    padding: 0 0.595%;
-    float: left; }
-    footer #news p {
-      border-top: 1px solid #333333;
-      padding: 0.5em; }
+  footer ul li {
+    float: left;
+    padding: 0.5em 0;
+    margin-right: 1em; }
