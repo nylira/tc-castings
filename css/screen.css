@@ -47,9 +47,21 @@ strong {
 em {
   font-style: italic; }
 
+/*
+ * $cols: 12
+ *
+ * $divs: 7
+ *
+ *
+ *
+ * $column: 100% / $cols / $divs * ($divs - 1)
+ *
+ * $gutter: 100% / $cols / $divs
+ *
+ * $gut: $gutter / 2 */
 .cnt, header, #content, footer {
-  width: 96%%;
-  margin: 0 2%; }
+  width: 1008px;
+  margin: 0 auto; }
   .cnt:after, header:after, #content:after, footer:after {
     clear: both;
     display: block;
@@ -150,181 +162,242 @@ li.submit button {
     background: -webkit-gradient(linear, left top, left bottom, from(#00324b), to(#64c8ff));
     background: -moz-linear-gradient(#00324b, #64c8ff); }
 
-@media screen and (max-width: 1920px) {
-  body {
-    font-size: 24px; } }
-
-@media screen and (max-width: 1680px) {
-  body {
-    font-size: 22px; } }
-
-@media screen and (max-width: 1440px) {
-  body {
-    font-size: 20px; } }
-
-@media screen and (max-width: 1280px) {
-  body {
-    font-size: 18px; } }
-
-@media screen and (max-width: 1024px) {
-  body {
-    font-size: 16px; } }
-
-@media screen and (max-width: 800px) {
-  body {
-    font-size: 12px; } }
-
+/*
+ * @media screen and (max-width: 1920px)
+ *
+ *   body
+ *
+ *     font-size: 24px
+ *
+ *
+ *
+ * @media screen and (max-width: 1680px)
+ *
+ *   body
+ *
+ *     font-size: 22px
+ *
+ *
+ *
+ * @media screen and (max-width: 1440px)
+ *
+ *   body
+ *
+ *     font-size: 20px
+ *
+ *
+ *
+ * @media screen and (max-width: 1280px)
+ *
+ *   body
+ *
+ *     font-size: 18px
+ *
+ *
+ *
+ * @media screen and (max-width: 1024px)
+ *
+ *   body
+ *
+ *     font-size: 16px
+ *
+ *
+ *
+ * @media screen and (max-width: 800px)
+ *
+ *   body
+ *
+ *     font-size: 12px */
 /*---------------------------------------------------------------------- */
 body {
+  font-size: 14px;
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
-  background: white; }
+  background: #e4e3dd; }
 
 a {
-  color: #ff7f00;
+  color: #6c9b48;
   text-decoration: none; }
 
 /*---------------------------------------------------------------------- */
 header {
-  padding: 1.5em 0 0; }
+  margin-top: 3em;
+  background: #333333; }
   header a#branding {
     display: block;
-    width: 32.143%;
-    padding-left: 0.595%;
-    padding-right: 0.595%;
+    width: 480px;
+    padding-left: 12px;
+    padding-right: 12px;
     float: left; }
     header a#branding h1 {
-      padding: 0.667em 0 1.5em;
-      font-size: 1.5em;
+      font: 150%/6 "Helvetica Neue", Arial, Helvetica, sans-serif;
       letter-spacing: -1px;
-      color: #333333;
-      border-top: 0.333em solid #333333;
-      border-bottom: 1px solid #cccccc; }
+      color: #cccccc; }
       header a#branding h1 span {
-        font-weight: normal; }
+        color: #888888; }
     header a#branding:hover h1 {
-      color: #ff7f00;
-      text-decoration: underline; }
+      color: white; }
+    header a#branding:hover h1 span {
+      color: #cccccc; }
     header a#branding p {
       line-height: 1;
       color: #aaaaaa;
       display: none; }
   header nav {
-    width: 65.476%;
-    margin-left: 0.595%;
-    margin-right: 0.595%;
+    width: 480px;
+    margin-left: 12px;
+    margin-right: 12px;
     float: left;
-    border-top: 0.5em solid #333333;
-    border-bottom: 1px solid #cccccc; }
+    padding: 2em 0 0; }
     header nav ul {
       overflow: hidden; }
-      header nav ul li {
+      header nav ul li.tree {
         float: left;
-        width: 25%; }
-        header nav ul li a {
+        width: 33.333%; }
+        header nav ul li.tree p {
           display: block;
-          padding: 1em 0 3em;
+          font-size: 12px;
           font-weight: bold;
-          color: #333333;
-          .color: white;
-          .background: black; }
-          header nav ul li a:hovera {
-            background: #ff7f00;
-            border-bottom: 0.5em solid #333333; }
-          header nav ul li a:hover {
-            color: #ff7f00;
-            text-decoration: underline; }
-        header nav ul li ul {
-          display: none; }
+          color: #aaaaaa; }
+        header nav ul li.tree ul li a {
+          display: block;
+          font-size: 12px;
+          color: #666666; }
+          header nav ul li.tree ul li a:hover {
+            color: #cccccc; }
 
 /*---------------------------------------------------------------------- */
-#content #slideshow {
-  overflow: hidden;
-  margin: 0.5em 0; }
-  #content #slideshow ul#slides li.slide {
-    padding: 0;
-    margin: 0.595%;
+#content {
+  background: white;
+  padding: 0.5em 0; }
+  #content #title {
+    padding: 3em 0 1em;
+    margin: 0 0 2em;
+    overflow: hidden;
+    background: #dce6d7; }
+    #content #title h2 {
+      width: 312px;
+      margin-left: 12px;
+      margin-right: 12px;
+      float: left;
+      font-weight: normal;
+      margin-top: 0.5em; }
+    #content #title h3 {
+      width: 648px;
+      margin-left: 12px;
+      margin-right: 12px;
+      float: left;
+      font-size: 1.5em;
+      letter-spacing: -1px; }
+  #content #body q:before {
+    content: "\201C"; }
+  #content #body q:after {
+    content: "\201D"; }
+  #content #body a:hover {
+    border-bottom: 1px solid #6c9b48; }
+  #content #body p {
+    padding: 0 0 2em; }
+  #content #body cite {
+    border-top: 1px solid #e4e3dd;
+    display: block;
+    padding: 1em 0 0;
+    font-style: normal; }
+    #content #body cite:before {
+      content: "\2014"; }
+
+#index-page #content #slideshow {
+  overflow: hidden; }
+  #index-page #content #slideshow ul#slides li.slide {
     position: relative; }
-    #content #slideshow ul#slides li.slide a {
+    #index-page #content #slideshow ul#slides li.slide a {
       display: block; }
-      #content #slideshow ul#slides li.slide a p {
+      #index-page #content #slideshow ul#slides li.slide a p {
         position: absolute;
         bottom: 2em;
         left: 0;
-        padding: 0 1.5em 0 0.5em;
-        font: bold 3em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        letter-spacing: -2px;
+        padding: 0 0.5em;
+        width: 100%;
+        font: 2em/2 "Helvetica Neue", Arial, Helvetica, sans-serif;
         color: white;
-        background: black;
-        background: rgba(0, 0, 0, 0.8); }
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.15s ease;
+        -webkit-transition: all 0.15s ease;
+        -moz-transition: all 0.15s ease;
+        -o-transition: all 0.15s ease; }
+      #index-page #content #slideshow ul#slides li.slide a:hover p {
+        opacity: 1; }
 
-#about #content .title {
-  width: 98.81%;
-  margin-left: 0.595%;
-  margin-right: 0.595%;
+#news-page #content #body {
+  margin: 0 0 6em; }
+  #news-page #content #body article {
+    border-bottom: 1px solid #e4e3dd;
+    margin: 0 12px 2em;
+    overflow: hidden; }
+    #news-page #content #body article h4 {
+      width: 480px;
+      margin-left: 12px;
+      margin-right: 12px;
+      float: left;
+      font: 1.5em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+      margin: 0 0 0.5em 336px; }
+    #news-page #content #body article p.date {
+      width: 312px;
+      margin-left: 12px;
+      margin-right: 12px;
+      float: left;
+      margin: -2em 0 0;
+      padding: 0; }
+    #news-page #content #body article .body {
+      width: 480px;
+      margin-left: 12px;
+      margin-right: 12px;
+      float: left;
+      margin-left: 336px; }
+      #news-page #content #body article .body p {
+        margin: 0; }
+
+#about-page #content #body {
+  width: 480px;
+  padding-left: 12px;
+  padding-right: 12px;
   float: left;
-  margin: 2.5em 0.595% 1.5em;
-  display: table;
-  border-bottom: 1px solid #cccccc; }
-  #about #content .title h2, #about #content .title h3 {
-    display: table-cell;
-    vertical-align: bottom; }
-  #about #content .title h2 {
-    padding: 0 0 1.5em;
-    font-weight: normal;
-    font-family: Cambria, Georgia, serif; }
-  #about #content .title h3 {
-    width: 66.667%;
-    padding: 0 16.667% 1em 0;
-    font-size: 1.5em;
-    letter-spacing: -1px; }
-#about #content .body {
-  width: 48.81%;
-  padding-left: 0.595%;
-  padding-right: 0.595%;
+  margin: 0 168px 6em 336px; }
+
+#contact-page #content #body {
+  width: 480px;
+  padding-left: 12px;
+  padding-right: 12px;
   float: left;
-  margin: 0 16.667% 0 33.333%; }
-  #about #content .body .dropa {
-    display: block;
-    float: left;
-    font: 13em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin: -0.1em 0.05em -0.2em 0.5em; }
-  #about #content .body q:before {
-    content: "\201C"; }
-  #about #content .body q:after {
-    content: "\201D"; }
-  #about #content .body p {
-    font-family: Cambria, Georgia, serif;
-    padding: 0 0 1em; }
-  #about #content .body cite {
-    border-top: 1px solid #dddddd;
-    display: block;
-    margin: 3em 0 3em;
-    padding: 1em 0 3em;
-    font-style: normal; }
-    #about #content .body cite:before {
-      content: "\2014"; }
+  margin: 0 168px 6em 336px; }
+  #contact-page #content #body dl dt {
+    font-weight: bold; }
+  #contact-page #content #body dl dd {
+    padding: 1em 0;
+    margin: 0 0 2em;
+    border-bottom: 1px solid #e4e3dd; }
 
 /*---------------------------------------------------------------------- */
 footer {
-  font-size: 0.75em; }
+  margin-bottom: 4.5em;
+  font-size: 12px;
+  background: white; }
   footer nav {
-    width: 98.81%;
-    margin-left: 0.595%;
-    margin-right: 0.595%;
+    width: 984px;
+    margin-left: 12px;
+    margin-right: 12px;
     float: left;
-    padding: 0 0 1em;
-    border-top: 1px solid #333333; }
+    padding: 0.5em 0 1em;
+    border-top: 2px solid #13100f; }
     footer nav ul li {
       float: left;
       padding: 0.5em 0;
       margin-right: 1em; }
-      footer nav ul li#news {
+      footer nav ul li#copy {
         float: right;
         margin: 0; }
       footer nav ul li a {
-        color: #333333; }
+        color: #666666; }
         footer nav ul li a:hover, footer nav ul li a:focus {
-          color: #ff7f00;
-          background: #fffaf0; }
+          color: #6c9b48; }

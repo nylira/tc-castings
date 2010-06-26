@@ -1,8 +1,13 @@
-$cols: 12
-$divs: 7
+/*
+  $cols: 12
+  $divs: 7
 
-$column: 100% / $cols / $divs * ($divs - 1)
-$gutter: 100% / $cols / $divs
+  $column: 100% / $cols / $divs * ($divs - 1)
+  $gutter: 100% / $cols / $divs
+  $gut: $gutter / 2
+
+$column: 60px
+$gutter: 24px
 $gut: $gutter / 2
 
 $s1: $column + $gutter
@@ -19,8 +24,8 @@ $s11: $s1 * 11
 $s12: $s1 * 12
 
 .cnt
-  width: 96%%
-  margin: 0 2%
+  width: $s12
+  margin: 0 auto
   &:after
     clear: both
     display: block
