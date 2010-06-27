@@ -245,16 +245,16 @@ header {
       color: #aaaaaa;
       display: none; }
   header nav {
-    width: 480px;
-    margin-left: 12px;
-    margin-right: 12px;
+    width: 504px;
     float: left;
     padding: 2em 0 0; }
     header nav ul {
       overflow: hidden; }
       header nav ul li.tree {
-        float: left;
-        width: 33.333%; }
+        width: 144px;
+        margin-left: 12px;
+        margin-right: 12px;
+        float: left; }
         header nav ul li.tree p {
           display: block;
           font-size: 12px;
